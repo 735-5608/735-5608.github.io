@@ -1,86 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Registration Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
   <style>
-    .container {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #ff006a, #cc00ff);
+      height: 100vh;
       display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .left {
-      width: 50%;
-      float: left;
+
+    .container {
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      padding: 20px;
+      width: 80%;
+      max-width: 500px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .right {
-      width: 50%;
-      float: right;
-    }
-    .form-group {
+
+    .input-container {
+      width: 48%;
+      display: flex;
+      flex-direction: column;
       margin-bottom: 15px;
     }
-    .form-group label {
-      display: inline-block;
-      width: 120px;
-      text-align: right;
-      margin-right: 10px;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
     }
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group input[type="tel"],
-    .form-group select {
-      width: 600px;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
     }
-    .form-group select {
-      width: 216px;
+
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
     }
-    .form-group input[type="submit"] {
-      width: 120px;
-      margin-left: 130px;
+
+    button {
+      background-color: #4c9eff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
+
+    button:hover {
+      background-color: #6eb8ff;
+    }
+
   </style>
 </head>
-<body style="background: linear-gradient(rgb(209, 0, 115),rgb(138, 12, 223));">
-</body>
-  <div style="background-color: white;" >      
-  <h2>Registration Form</h2>
+
+<body>
   <div class="container">
-    <div class="left">
-      <div class=>
-        <label for="first-name">First Name:</label><br>
-        <input type="text" id="first-name" name="first-name" required><br><br>
-      </div>
-      <div>
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" name="birthday" required><br><br>
-      </div>
-      <div>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br><br>
-      </div>
-      <div>
-        <label for="subject">Subject:</label><br>
-        <input type="text" id="subject" name="subject"  required><br><br>
-      </div>
+    <div class="input-container">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" required>
     </div>
-    <div class="right">
-      <div>
-        <label for="last-name">Last Name:</label><br>
-        <input type="text" id="last-name" name="last-name" required>
-      </div>
-      <div>
-        <p>    Gender</p>
-        <input type="radio" id="html" name="fav_language" value="Male">
-        <label for="html">Male</label>
-        <input type="radio" id="css" name="fav_language" value="Female">
-        <label for="css">Female</label><br><br>
-      </div>
-      <div >
-        <label for="phone">Phone Number:</label><br>
-        <input type="tel" id="phone" name="phone" required>
-      </div>
+
+    <div class="input-container">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" required>
     </div>
+
+    <div class="input-container">
+      <label for="birthday">Birthday</label>
+      <input type="date" id="birthday" name="birthday" required>
+    </div>
+
+    <div class="input-container">
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="input-container">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="input-container">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <div class="input-container" style="width: 100%;">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" required>
+    </div>
+
+    <button type="submit">Register</button>
   </div>
-  <div class="form-group">
-    <input type="submit" value="Register">
-  </div>
-</div>
+</body>
+
 </html>
